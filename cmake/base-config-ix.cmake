@@ -39,7 +39,7 @@ if (LLVM_TREE_AVAILABLE)
   # Compute the Clang version from the LLVM version.
   # FIXME: We should be able to reuse CLANG_VERSION variable calculated
   #        in Clang cmake files, instead of copying the rules here.
-  string(REGEX MATCH "[0-9]+\\.[0-9]+(\\.[0-9]+)?" CLANG_VERSION
+  string(REGEX MATCH "[0-9]+" CLANG_VERSION
          ${PACKAGE_VERSION})
   # Setup the paths where cheetah runtimes and headers should be stored.
   set(CHEETAH_OUTPUT_DIR ${LLVM_LIBRARY_OUTPUT_INTDIR}/clang/${CLANG_VERSION})
